@@ -1,0 +1,6 @@
+{
+  "name": "FMCBKD Staff ID Card Printing System",
+  "description": "Professional Staff ID Card Design, Live Preview, QR Generation and Printing Software for Federal Medical Centre, Birnin Kudu, Jigawa State — IT Unit Printing Section.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .pattern-grid {
+    background-image: radial-gradient(rgba(100, 116, 139, 0.25) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+}
+
+@media print {
+  @page {
+    size: 54mm 85.6mm portrait;
+    margin: 0;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide all dashboard application chrome */
+  #app-screen,
+  header,
+  nav,
+  aside,
+  button,
+  .print\\:hidden {
+    display: none !important;
+  }
+
+  /* Show print root */
+  #print-root {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .print-card-page {
+    page-break-after: always;
+    break-after: page;
+    width: 54mm;
+    height: 85.6mm;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .print-card-wrapper {
+    width: 340px;
+    height: 540px;
+    /* Scale 340px down to fit 54mm (approx 204px at 96dpi) */
+    transform: scale(0.595);
+    transform-origin: center center;
+  }
+}
